@@ -24,6 +24,7 @@
             Style="{StaticResource TitleLabelFontSize}"/>
 
             <Slider
+            x:Name="slider"
             Grid.Column="0"
             Grid.Row="1"
             MaximumTrackColor="LightGray"
@@ -41,7 +42,9 @@
             <Label
             Grid.Column="0"
             Grid.Row="2"
-            Text="{Binding Path=SliderValue, Mode=TwoWay}"
+            BindingContext="{x:Reference Name=slider}"
+            Rotation="{Binding Path=Value}"
+            Text="{Binding Value,StringFormat='{0:F0}'}"
             FontSize="20"
             TextColor="Purple"
             HorizontalTextAlignment="Center"
