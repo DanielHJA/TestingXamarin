@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Testing.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <OnPlatform x:Key="SliderMinimumTrackColor" x:TypeArguments="Color">
+                <On Platform="iOS">Green</On>
+                <On Platform="Android">Red</On>
+            </OnPlatform>
+            
+            <OnPlatform x:Key="TitleLabelFontSizeValue" x:TypeArguments="x:Double">
+                <On Platform="iOS">22</On>
+                <On Platform="Android">14</On>
+            </OnPlatform>
+
+            <Style x:Key="SliderColor" TargetType="Slider">
+                <Setter Property="MinimumTrackColor" Value="{StaticResource SliderMinimumTrackColor}" />
+            </Style>
+
+            <Style x:Key="TitleLabelFontSize" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource TitleLabelFontSizeValue}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
