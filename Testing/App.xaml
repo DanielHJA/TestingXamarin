@@ -4,19 +4,19 @@
 
         <ResourceDictionary>
 
-            <OnPlatform x:Key="SliderMinimumTrackColor" x:TypeArguments="Color">
+            <!--<OnPlatform x:Key="SliderMinimumTrackColor" x:TypeArguments="Color">
                 <On Platform="iOS">Green</On>
                 <On Platform="Android">Red</On>
-            </OnPlatform>
+            </OnPlatform>-->
             
             <OnPlatform x:Key="TitleLabelFontSizeValue" x:TypeArguments="x:Double">
                 <On Platform="iOS">22</On>
                 <On Platform="Android">14</On>
             </OnPlatform>
 
-            <Style x:Key="SliderColor" TargetType="Slider">
+            <!--<Style x:Key="SliderColor" TargetType="Slider">
                 <Setter Property="MinimumTrackColor" Value="{StaticResource SliderMinimumTrackColor}" />
-            </Style>
+            </Style>-->
 
             <Style x:Key="TitleLabelFontSize" TargetType="Label">
                 <Setter Property="FontSize" Value="{StaticResource TitleLabelFontSizeValue}" />
